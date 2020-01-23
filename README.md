@@ -3,9 +3,9 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|email|string|null: fales, unique: true|
-|password|string|null: fales, unique: true|
-|nickname|string|null: fales, unique: true|
+|email|string|null: false, unique: true|
+|password|string|null: false, unique: true|
+|nickname|string|null: false, unique: true|
 ### Association
 - has_many :messages
 - has_many :users_uroups
