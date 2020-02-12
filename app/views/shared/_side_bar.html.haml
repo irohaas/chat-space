@@ -1,0 +1,18 @@
+!!!
+.side-bar
+  .side-user
+    .side-user__box
+      .side-user__box__user-name masa
+      .side-user__box__icon
+        = link_to "#", class: "side-user__box__icon__btn" do
+          = icon('fas', 'edit')
+        = link_to "#", class: "side-user__box__icon__btn" do
+          = icon('fas', 'cog')
+  .side-group
+    .side-group__member
+      .side-group__member__group-name techcamp
+      .side-group__member__group-latest-massage まだメッセージがありません
+    .side-group__member
+      .side-group__member__group-name techcamp
+      .side-group__member__group-latest-massage まだメッセージがありません
+.link{ :rel => "stylesheet", :href =>"modules/side_bar.css" }
