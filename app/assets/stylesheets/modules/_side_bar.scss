@@ -1,0 +1,45 @@
+.side-bar{
+  width: 300px;
+  height: 100vh;
+  background-color: #253141;
+  float: left;
+  .side-user{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__box{
+      height: 20px;
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+      &__user-name{
+        color: #ffffff;
+          font-size: 16px;
+      }
+      &__icon{
+        width: 60px;
+        text-align: right;
+        &__btn{
+          color: #ffffff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .side-group{
+    padding: 20px 20px 0;
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    &__member{
+      margin-bottom: 40px;
+      color: #ffffff;
+      &__group-name{
+        font-size: 15px;
+      }
+      &__group-latest-massage{
+        font-size: 11px;
+      }
+    }
+  }
+}
