@@ -4,8 +4,8 @@
     .group-info__left-box
       .group-info__left-box__current-group test
       .group-info__left-box__member-list Membre : masa
-    %a{ :href => "#" }
-      .group-info__edit-btn Edit
+    = link_to "#", class: "group-info__edit-btn" do
+      Edit
   .message-list
     .message
       .message__uppre-info
