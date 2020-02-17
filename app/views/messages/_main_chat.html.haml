@@ -2,27 +2,21 @@
 .main-chat
   .group-info
     .group-info__left-box
-      .group-info__left-box__current-group test
-      .group-info__left-box__member-list Membre : masa
-    = link_to "#", class: "group-info__edit-btn" do
+      .group-info__left-box__current-group
+        = @group.name
+      .group-info__left-box__member-list
+        = current_user.name
+    = link_to edit_group_path(current_user), class: "group-info__edit-btn" do
       Edit
   .message-list
-    .message
-      .message__uppre-info
-        .message__uppre-info__talker masa
-        .message__uppre-info__date 2019/11/20(wed) 17:43:01
-      .message__text おはよう！
-    .message
-      .message__uppre-info
-        .message__uppre-info__talker masa
-        .message__uppre-info__date 2019/11/20(wed) 17:43:44
-      .message__text 今日は夜から雨
-  .message-form
-    %form#new_message.new_message{ accept: { charset: "UTF-8"}, action: "", enctype: "multipart/form-data", method: "post" }
-      .input_box
-        %input.input_box__text{ name: "message[content]", placeholder: "type a message", type: "text" }
-        %label.input_box__image{ for: "message_image"}
-          = icon('fas', 'image')
-          %input#message_image.input-box__image_file{name: "message[image]", type: "file" }
-      %input.submit-btn{ "data-disable-with": "Send", name: "commit", type: "submit", value: "Send" }
+    .messages
+      = render @messages
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
 .link{ rel: "stylesheet", href: "modules/main-chat.css" }
