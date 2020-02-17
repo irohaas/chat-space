@@ -12,10 +12,10 @@
   .side-group
     - current_user.groups.each do |group|
       .side-group__member
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .side-group__member__group-name 
             = group.name
           .side-group__member__group-latest-massage
-            まだメッセージがありません
+            = group.show_last_message
     
 .link{ rel: "stylesheet", href: "modules/side_bar.css" }

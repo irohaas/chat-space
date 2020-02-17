@@ -29,16 +29,23 @@
   }
   .side-group{
     padding: 20px 20px 0;
+    color: #ffffff;
+    text-decoration: none;
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     &__member{
       margin-bottom: 40px;
       color: #ffffff;
+      text-decoration: none;      
       &__group-name{
         font-size: 15px;
+        color: #ffffff;
+        text-decoration: none;
       }
       &__group-latest-massage{
         font-size: 11px;
+        color: #ffffff;
+        text-decoration: none;
       }
     }
   }
