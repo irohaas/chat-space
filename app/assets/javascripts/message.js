@@ -57,7 +57,7 @@ $(function(){
      $('.messages').append(html);
      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});      
      $('form')[0].reset();
-     
+     $('.form__submit').prop('disabled', false);     
    })
 })
 });
