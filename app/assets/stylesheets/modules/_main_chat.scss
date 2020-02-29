@@ -33,12 +33,12 @@
       right: 40px;
     }
   }
-  .message-list{
+  .messages{
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding: 35px 40px;
     overflow: auto; 
-    .messages{
+    .message{
       padding-bottom: 46px;
       .upper-message{
         display: flex;
