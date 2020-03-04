@@ -5,7 +5,9 @@
       .group-info__left-box__current-group
         = @group.name
       .group-info__left-box__member-list
-        = current_user.name 
+        Member
+        = current_user.name
+          
     = link_to edit_group_path(current_user), class: "group-info__edit-btn" do
       Edit
   .messages

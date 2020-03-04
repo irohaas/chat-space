@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
 
   def index
+    @group.users << current_user 
   end
 
   def new  
